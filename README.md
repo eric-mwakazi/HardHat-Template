@@ -1,13 +1,26 @@
-# Sample Hardhat Project
+# HARDHAT TEMPLATE
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+- This template was created to the shorten the hardhat setup and configuration time.
+- All you need is to clone it then run the necessary commands to install the necessary modules
 
-Try running some of the following tasks:
+- Commands to run after cloning:
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.ts
-```
+  ```shell
+  npm install
+  npx i dotenv
+  ```
+- The template comes with a simple counter smart contract that you can interact with
+  ``` compile first
+  npx hardhat compile
+  ```
+  ```testing the contract
+  npx hardhat test
+  ```
+  ```deploy locally
+  npx hardhat run scripts/deploy.ts
+  ```
+  ```deploy to sepolia testnet
+  npx hardhat run scripts/deploy.ts --network sepolia
+  ```
+
+- In hardhat.config.ts you can change the network URL to infura if you are not using Alchemy
