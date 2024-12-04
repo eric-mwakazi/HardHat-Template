@@ -10,16 +10,20 @@
   npx i dotenv
   ```
 - The template comes with a simple counter smart contract that you can interact with
-  ``` compile first
+- 1. compile the contract
+  ``` shell
   npx hardhat compile
   ```
-  ```testing the contract
+- 2. test the contract
+  ```shell
   npx hardhat test
   ```
-  ```deploy locally
+- To deploy locally
+  ```shell
   npx hardhat run scripts/deploy.ts
   ```
-  ```deploy to sepolia testnet
+- To deploy to sepolia testnet
+  ```
   npx hardhat run scripts/deploy.ts --network sepolia
   ```
 
