@@ -7,7 +7,7 @@
 
   ```shell
   npm install
-  npx i dotenv
+  npm i dotenv
   ```
 - The template comes with a simple counter smart contract that you can interact with
   1. Compile the contract
