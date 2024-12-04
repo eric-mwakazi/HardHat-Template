@@ -24,7 +24,7 @@
   npx hardhat run scripts/deploy.ts
   ```
   2. Deploying to sepolia testnet
-  ```
+  ```shell
   npx hardhat run scripts/deploy.ts --network sepolia
   ```
 
@@ -33,4 +33,29 @@
   ![hh](https://github.com/user-attachments/assets/be7e3bf2-e223-4df6-9064-bb55a0b0479a)
 
 
-- IN GENERAL THIS ALSO THE deploy.ts TEMPLATE 
+- This deploy.ts TEMPLATE
+  ```solidity
+  // scripts/deploy.ts
+import { ethers } from "hardhat";
+
+async function main() {
+  // Get the contract factory
+  const ContractName = await ethers.getContractFactory("YourContractName");
+  
+  // Deploy the contract
+  const contract = await ContractName.deploy();
+  
+  // Wait for the contract to be deployed
+  await contract.deploymentTransaction()?.wait();
+  
+  console.log(`Contract deployed to: ${await contract.getAddress()}`);
+}
+
+// Recommended pattern for handling async errors
+main()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
+  ```
