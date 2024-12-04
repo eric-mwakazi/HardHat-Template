@@ -29,3 +29,4 @@
   ```
 
 - In hardhat.config.ts you can change the network URL to infura if you are not using Alchemy
+- Add the .env file to the project root folder then add the ALCHEMY_RPC_SEPOLIA URL and your WALLET_PRIVATE_KEY
