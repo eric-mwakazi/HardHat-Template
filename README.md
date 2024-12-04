@@ -33,7 +33,7 @@
   ![hh](https://github.com/user-attachments/assets/be7e3bf2-e223-4df6-9064-bb55a0b0479a)
 
 
-- This deploy.ts TEMPLATE
+- This is the deploy.ts TEMPLATE
   ```solidity
   // scripts/deploy.ts
   import { ethers } from "hardhat";
