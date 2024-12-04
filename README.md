@@ -10,9 +10,10 @@
   npm i dotenv
   ```
   
-- In hardhat.config.ts you can change the network URL to infura if you are not using Alchemy
 - Add the .env file to the project root folder then add the ALCHEMY_RPC_SEPOLIA URL and your WALLET_PRIVATE_KEY
   ![hh](https://github.com/user-attachments/assets/be7e3bf2-e223-4df6-9064-bb55a0b0479a)
+
+- In hardhat.config.ts you can change the network URL to infura if you are not using Alchemy
   
 - The template comes with a simple counter smart contract that you can interact with
   1. Compile the contract
