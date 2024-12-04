@@ -16,7 +16,7 @@ contract Counter {
         count -= 1;
     }
 
-    function hello(string memory name) public pure returns (string memory) {
-        return string(abi.encodePacked("Hello ", name));    
+    function hello(string memory _name) public pure returns (string memory) {
+        return string(abi.encodePacked("Hello ", _name));    
     }
 }
