@@ -1,22 +1,17 @@
 import { ethers } from "hardhat";
 
 async function main() {
-  // Get the contract factory
-  const Counter = await ethers.getContractFactory("Counter");
+  // Get the contract factoryMpesaEthBridgeMain
+  const MpesaEthBridgeMain = await ethers.getContractFactory("MpesaEthBridgeMain");
+  const MpesaEthBridge = await MpesaEthBridgeMain.deploy();
+  await MpesaEthBridge.deploymentTransaction()?.wait();
   
-  // Deploy the contract
-  const contract = await Counter.deploy();
-  
-  // Wait for the contract to be deployed
-  await contract.deploymentTransaction()?.wait();
-  
-  console.log(`Contract deployed to: ${await contract.getAddress()}`);
+  console.log(`Contract deployed to: ${await MpesaEthBridge.getAddress()}`);
 }
 
-// Recommended pattern for handling async errors
 main()
-.then(() => process.exit(0))
-.catch((error) => {
-console.error(error);
-process.exit(1);
-});
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
