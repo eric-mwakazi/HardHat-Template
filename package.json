@@ -1,12 +1,12 @@
 {
-  "name": "charitydonationsmartcontract",
+  "name": "HardHat-Template",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Caleb Mokua",
+  "author": "eric mwakazi",
   "license": "ISC",
   "type": "commonjs",
   "description": "A Hardhat Template That Uses TypeScript",
